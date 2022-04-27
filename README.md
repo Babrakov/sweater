@@ -1,1 +1,1 @@
-# Spring Boot MVC (Sweater app)
+# Spring Boot MVC (Switter app)
