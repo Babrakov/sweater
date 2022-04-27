@@ -1,1 +1,1 @@
-# sweater
+# Spring Boot MVC (Sweater app)
