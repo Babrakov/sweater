@@ -1,13 +1,13 @@
-package com.example.sweater;
+package com.example.switter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SweaterApplication {
+public class SwitterApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SweaterApplication.class, args);
+        SpringApplication.run(SwitterApplication.class, args);
     }
 
 }
