@@ -5,6 +5,7 @@
 
     <div>
         <@login.logout />
+        <span><a href="/user">Usel list</a></span>
     </div>
 
     <div>
