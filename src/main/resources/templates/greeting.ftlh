@@ -1,4 +1,4 @@
-<#import "parts/common.ftl" as common>
+<#import "parts/common.ftlh" as common>
 
 <@common.page>
 <div>Hello  user!</div>

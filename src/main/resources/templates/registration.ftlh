@@ -1,13 +1,12 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" >
-<head>
-    <title>Spring Security Example </title>
-</head>
-<body>
-Add new user
-{{#message}}
-    {{message}}
-{{/message}}
+<#import "parts/common.ftlh" as common>
+<#import "parts/login.ftlh" as login>
 
-</body>
-</html>
+<@common.page>
+
+Add new user
+${message}
+
+
+<@login.login "/registration"/>
+
+</@common.page>

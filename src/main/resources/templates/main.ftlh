@@ -1,23 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<#import "parts/common.ftlh" as common>
+<#import "parts/login.ftlh" as login>
+
+<@common.page>
 
     <div>
-        <form action="/logout" method="post">
-            <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
-            <input type="submit" value="Sign Out"/>
-        </form>
+        <@login.logout />
     </div>
 
     <div>
         <form method="post">
             <input type="text" name="text" placeholder="Введите сообщения">
             <input type="text" name="tag" placeholder="Тэг">
-            <input type="hidden" name="_csrf" value="{{_csrf.token}}">
+            <input type="hidden" name="_csrf" value="${_csrf.token}">
             <button type="submit">Добавить</button>
         </form>
     </div>
@@ -25,20 +19,20 @@
     <div>Список сообщений</div>
 
     <div>
-        <form method="post" action="filter">
-            <input type="text" name="filter">
-            <input type="hidden" name="_csrf" value="{{_csrf.token}}">
+        <form method="get" action="/main">
+            <input type="text" name="filter" value="${filter}">
             <button type="submit">Найти</button>
         </form>
     </div>
 
-    {{#messages}}
-    <div>
-        <b>{{id}}</b>
-        <span>{{text}}</span>
-        <i>{{tag}}</i>
-        <strong>{{authorName}}</strong>
-    </div>
-    {{/messages}}
-</body>
-</html>
+    <#list messages as message>
+        <div>
+            <b>${message.id}</b>
+            <span>${message.text}</span>
+            <i>${message.tag}</i>
+            <strong>${message.authorName}</strong>
+        </div>
+
+    </#list>
+
+</@common.page>
