@@ -4,9 +4,9 @@
 <@common.page>
 
 Add new user
-${message}
+${message?if_exists}
 
 
-<@login.login "/registration"/>
+<@login.login "/registration" "Create user" />
 
 </@common.page>
