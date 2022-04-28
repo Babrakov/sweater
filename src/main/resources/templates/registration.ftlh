@@ -3,10 +3,8 @@
 
 <@common.page>
 
-Add new user
-${message?if_exists}
-
-
-<@login.login "/registration" "Create user" />
+    <div class="mb-1">Add new user</div>
+    ${message?ifExists}
+    <@login.login "/registration" true />
 
 </@common.page>
